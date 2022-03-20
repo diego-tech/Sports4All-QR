@@ -17,7 +17,7 @@ def readQr():
         # check if there is a QRCode in the image
         if data:
             codeReader = data
-            print("Code Reader: ", codeReader)
+            # print("Code Reader: ", codeReader)
             return codeReader 
 
         # cv2.imshow("QRCODEscanner", img)

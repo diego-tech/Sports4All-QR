@@ -2,4 +2,5 @@ from ReadQR import qr_reader
 
 # Functions
 def readQr():
-    print(qr_reader.readQr())
+    reader = qr_reader.readQr()
+    return reader
