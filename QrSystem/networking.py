@@ -12,7 +12,7 @@ import json
 
 # qrValidation('12')
 
-mockFile = "./mockresponse.json"
+mockFile = "../mockresponse.json"
 
 with open(mockFile) as f:
     data = json.load(f)
