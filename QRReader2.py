@@ -14,6 +14,7 @@ while True:
         a = data
         print("Data: ", a)
 
+    cv2.imshow("QRCODEscanner", img)
     if cv2.waitKey(1) == ord("q"):
         break
 
