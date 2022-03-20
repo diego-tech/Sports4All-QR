@@ -15,6 +15,5 @@ import json
 mockFile = "./mockresponse.json"
 
 with open(mockFile) as f:
-    data = json.dumps(f)
-
+    data = json.load(f)
     print(data)
