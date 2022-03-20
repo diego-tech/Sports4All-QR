@@ -3,9 +3,9 @@ import RPi.GPIO as GPIO
 import time
 
 # Variables
-green_led_pin = 19
-red_led_pin = 26
-buzzer_pin = 13
+green_led_pin = 7
+red_led_pin = 25
+buzzer_pin = 15
 
 # Funciones
 

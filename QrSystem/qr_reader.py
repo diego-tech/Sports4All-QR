@@ -1,4 +1,6 @@
+import networking
 import cv2
+
 
 def readQr():
     cap = cv2.VideoCapture(0)
@@ -21,6 +23,6 @@ def readQr():
         # cv2.imshow("QRCODEscanner", img)
         if cv2.waitKey(1) == ord("q"):
             break
-            
+
     cap.release()
     cv2.destroyAllWindows()
