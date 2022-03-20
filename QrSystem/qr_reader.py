@@ -1,5 +1,6 @@
-from QrSystem import networkmanager
+from QrSystem import networkmanager, sensors
 import cv2
+import time
 
 
 def readQr():
@@ -17,9 +18,11 @@ def readQr():
         data, bbox, _ = detector.detectAndDecode(img)
         # check if there is a QRCode in the image
         if data:
+            sensors.buzzerOn()
             codeReader = data
-            checkStatus()
             print("Qr Code Value: ", codeReader)
+            checkStatus()
+            time.sleep(3)
 
         # cv2.imshow("QRCODEscanner", img)
         if cv2.waitKey(1) == ord("q"):
@@ -32,6 +35,8 @@ def checkStatus():
     status = networkmanager.qrValidation()
 
     if status == 1:
-        print("Adelante")
+        sensors.sensorOn()
+        print("Código Válido")
     elif status == 0:
-        print("No Puede")
+        sensors.sensorOff()
+        print("Código No Válido")

@@ -22,13 +22,17 @@ def sensorOn():
     setPines()
     GPIO.output(green_led_pin, GPIO.HIGH)
     GPIO.output(red_led_pin, GPIO.LOW)
-    GPIO.output(buzzer_pin, GPIO.HIGH)
-    time.sleep(0.1)
+    time.sleep(1)
 
 
 def sensorOff():
     setPines()
     GPIO.output(green_led_pin, GPIO.HIGH)
     GPIO.output(red_led_pin, GPIO.HIGH)
+    time.sleep(1)
+
+def buzzerOn():
+    GPIO.output(buzzer_pin, GPIO.HIGH)
+    time.sleep(0.3)
     GPIO.output(buzzer_pin, GPIO.LOW)
-    time.sleep(0.1)
+
