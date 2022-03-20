@@ -39,5 +39,5 @@ def checkStatus():
         print("Código Válido")
     elif status == 0:
         sensors.sensorOff()
-        sensors.buzzerOn()
+        # sensors.buzzerOn()
         print("Código No Válido")
