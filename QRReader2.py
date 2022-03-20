@@ -13,7 +13,6 @@ while True:
     if data:
         a = data
         print("Data: ", a)
-        break
 
     cv2.imshow("QRCODEscanner", img)
     if cv2.waitKey(1) == ord("q"):
