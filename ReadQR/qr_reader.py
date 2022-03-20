@@ -13,7 +13,7 @@ def readQr():
         _, img = cap.read()
 
         # detect and decode
-        data, _ = detector.detectAndDecode(img)
+        data, bbox, _ = detector.detectAndDecode(img)
         # check if there is a QRCode in the image
         if data:
             codeReader = data
