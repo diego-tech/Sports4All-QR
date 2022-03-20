@@ -1,3 +1,4 @@
+from time import sleep
 import cv2
 
 cap = cv2.VideoCapture(0)
@@ -13,10 +14,16 @@ while True:
     if data:
         a = data
         print("Data: ", a)
+        sleep(3)
 
-    cv2.imshow("QRCODEscanner", img)
+    # cv2.imshow("QRCODEscanner", img)
     if cv2.waitKey(1) == ord("q"):
         break
+
+if a == 3522:
+    print("Correcto")
+else:
+    print("No")
 
 cap.release()
 cv2.destroyAllWindows()
