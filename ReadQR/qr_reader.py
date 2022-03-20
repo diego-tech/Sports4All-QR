@@ -1,15 +1,14 @@
 from time import sleep
 import cv2
 
-cap = cv2.VideoCapture(0)
-
-# Initialize the cv2 QRCode detector
-detector = cv2.QRCodeDetector()
-
-# Initialize Qr Code Variable
-codeReader = ""
-
 def readQr():
+    cap = cv2.VideoCapture(0)
+
+    # Initialize the cv2 QRCode detector
+    detector = cv2.QRCodeDetector()
+
+    # Initialize Qr Code Variable
+    codeReader = ""
     while True:
         _, img = cap.read()
 
