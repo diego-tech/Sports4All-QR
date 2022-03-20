@@ -1,4 +1,4 @@
-from ReadQR import qr_reader
+from QrSystem import qr_reader
 
 # Functions
 def readQr():
