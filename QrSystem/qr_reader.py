@@ -18,7 +18,7 @@ def readQr():
         data, bbox, _ = detector.detectAndDecode(img)
         # check if there is a QRCode in the image
         if data:
-            sensors.buzzerOn()
+            # sensors.buzzerOn()
             codeReader = data
             print("Qr Code Value: ", codeReader)
             checkStatus()
