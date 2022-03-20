@@ -12,6 +12,7 @@ while True:
     # check if there is a QRCode in the image
     if data:
         a = data
+        print("Data: ", a)
         break
 
     cv2.imshow("QRCODEscanner", img)
