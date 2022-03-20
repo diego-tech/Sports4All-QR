@@ -20,10 +20,10 @@ while True:
     if cv2.waitKey(1) == ord("q"):
         break
 
-if a == 3522:
-    print("Correcto")
-else:
-    print("No")
+    if a == 3522:
+        print("Correcto")
+    else:
+        print("No")
 
 cap.release()
 cv2.destroyAllWindows()
