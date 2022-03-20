@@ -16,4 +16,4 @@ mockFile = "./mockresponse.json"
 
 with open(mockFile) as f:
     data = json.loads(f.read())
-    print(data[0]['status'])
+    print(data)
