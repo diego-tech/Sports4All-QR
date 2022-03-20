@@ -18,6 +18,7 @@ def readQr():
         # check if there is a QRCode in the image
         if data:
             codeReader = data
+            checkStatus()
             print("Qr Code Value: ", codeReader)
 
         # cv2.imshow("QRCODEscanner", img)
@@ -26,3 +27,11 @@ def readQr():
 
     cap.release()
     cv2.destroyAllWindows()
+
+def checkStatus():
+    status = networking.qrValidation()
+
+    if status == 1:
+        print("Adelante")
+    elif status == 0:
+        print("No Puede")

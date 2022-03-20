@@ -1,20 +1,17 @@
 import requests
 import json
 
-# url = 'https://www.w3schools.com/python/demopage.php'
+url = 'https://www.w3schools.com/python/demopage.php'
 
-# def qrValidation(qrCode):
-#     params = {'qr': qrCode}
+def qrValidation():
+    # params = {'qr': qrCode}
+    # request = requests.post(url, data = params)
 
-#     request = requests.post(url, data = params)
+    # Test With Mock Json
+    mockFile = "../mockresponse.json"
 
-#     print(request)
-
-# qrValidation('12')
-
-mockFile = "../mockresponse.json"
-
-with open(mockFile) as f:
-    data = json.load(f)
-
-    print(data['status'])
+    with open(mockFile) as mf:
+        data = json.load(mf)
+        status = data['status']
+        print("Status :", status)
+        return status
