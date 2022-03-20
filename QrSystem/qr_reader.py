@@ -34,12 +34,11 @@ def checkStatus():
     status = networkmanager.qrValidation()
 
     if status == 1:
-        sensors.sensorOn()
-        time.sleep(3)
-        sensors.sensorOff()
-        # sensors.buzzerOn()
         print("Código Válido")
-    elif status == 0:
+        sensors.buzzerOn()
+        sensors.sensorOn()
         sensors.sensorOff()
-        # sensors.buzzerOn()
+    elif status == 0:
         print("Código No Válido")
+        sensors.buzzerOn()
+        sensors.sensorOff()
