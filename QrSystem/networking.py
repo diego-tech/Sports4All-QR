@@ -14,3 +14,4 @@ import json
 
 with open('mockresponse.json') as mr:
     data = json.loads(mr)
+    print(data)
