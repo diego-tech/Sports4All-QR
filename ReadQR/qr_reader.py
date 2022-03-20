@@ -18,13 +18,11 @@ def readQr():
         if data:
             codeReader = data
             print("Code Reader: ", codeReader)
-            sleep(3) 
+            return codeReader 
 
         # cv2.imshow("QRCODEscanner", img)
         if cv2.waitKey(1) == ord("q"):
             break
             
-        return codeReader 
-
     cap.release()
     cv2.destroyAllWindows()
