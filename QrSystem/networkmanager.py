@@ -18,5 +18,3 @@ def qrValidation():
     print("Status :", status)
 
     return status
-
-print(qrValidation())
