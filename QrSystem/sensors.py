@@ -33,6 +33,6 @@ def sensorOff():
 
 def buzzerOn():
     GPIO.output(buzzer_pin, GPIO.HIGH)
-    time.sleep(0.3)
+    time.sleep(0.5)
     GPIO.output(buzzer_pin, GPIO.LOW)
 

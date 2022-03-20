@@ -18,7 +18,6 @@ def readQr():
         data, bbox, _ = detector.detectAndDecode(img)
         # check if there is a QRCode in the image
         if data:
-            # sensors.buzzerOn()
             codeReader = data
             print("Qr Code Value: ", codeReader)
             checkStatus()
@@ -36,7 +35,9 @@ def checkStatus():
 
     if status == 1:
         sensors.sensorOn()
+        sensors.buzzerOn()
         print("Código Válido")
     elif status == 0:
         sensors.sensorOff()
+        sensors.buzzerOn()
         print("Código No Válido")
