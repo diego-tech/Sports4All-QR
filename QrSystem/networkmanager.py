@@ -14,4 +14,5 @@ def qrValidation():
         data = json.load(mf)
         status = data['status']
         print("Status :", status)
-        return status
+    
+    return status

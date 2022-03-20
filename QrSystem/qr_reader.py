@@ -1,4 +1,4 @@
-from networking import *
+from QrSystem import networkmanager
 import cv2
 
 
@@ -29,7 +29,7 @@ def readQr():
     cv2.destroyAllWindows()
 
 def checkStatus():
-    status = networking.qrValidation()
+    status = networkmanager.qrValidation()
 
     if status == 1:
         print("Adelante")
