@@ -1,4 +1,4 @@
-import networking
+from networking import *
 import cv2
 
 
