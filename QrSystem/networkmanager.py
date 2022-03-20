@@ -8,7 +8,7 @@ def qrValidation():
     # request = requests.post(url, data = params)
 
     # Test With Mock Json
-    mockFile = "../mockresponse.json"
+    mockFile = "./mockresponse.json"
 
     with open(mockFile) as mf:
         data = json.load(mf)
