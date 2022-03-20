@@ -12,6 +12,6 @@ import json
 
 # qrValidation('12')
 
-with open('./mockresponse.json') as mr:
-    data = json.loads(mr)
-    print(data)
+mock = open("./mockresponse.json", "a+")
+data = json.loads(mock)
+print(data)
