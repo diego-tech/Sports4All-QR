@@ -1,4 +1,3 @@
-from time import sleep
 import cv2
 
 cap = cv2.VideoCapture(0)
@@ -15,8 +14,6 @@ while True:
         a = data
         print("Data: ", a)
 
-    sleep(3)
-    
     if cv2.waitKey(1) == ord("q"):
         break
 
