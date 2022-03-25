@@ -1,20 +1,19 @@
 import requests
 import json
 
-url = 'https://www.w3schools.com/python/demopage.php'
-
+url = "http://ec2-3-8-102-5.eu-west-2.compute.amazonaws.com/api/qrvalidation"
 
 def qrValidation():
-    # params = {'qr': qrCode}
-    # request = requests.post(url, data = params)
+    params = {'qr': qrCode}
+    request = requests.post(url, data = params)
 
     # Test With Mock Dictionary
-    mockDictionary = {
-        "status": 1,
-        "msg": "Puerta abierta"
-    }
+    # mockDictionary = {
+    #     "status": 1,
+    #     "msg": "Puerta abierta"
+    # }
 
-    status = mockDictionary['status']
+    status = request['status']
     print("Status :", status)
 
     return status
