@@ -20,7 +20,7 @@ def readQr():
         if data:
             codeReader = data
             print("Qr Code Value: ", codeReader)
-            checkStatus()
+            checkStatus(codeReader)
             time.sleep(3)
 
         # cv2.imshow("QRCODEscanner", img)
@@ -30,8 +30,8 @@ def readQr():
     cap.release()
     cv2.destroyAllWindows()
 
-def checkStatus():
-    status = networkmanager.qrValidation()
+def checkStatus(qrCode):
+    status = networkmanager.qrValidation(qrCode)
 
     if status == 1:
         print("Código Válido")
