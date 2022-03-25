@@ -7,14 +7,7 @@ def qrValidation(qrCode):
     params = {'qr': qrCode}
     request = requests.post(url, data = params)
     jsonLoad = request.json()
-    print(jsonLoad)
-
-    # Test With Mock Dictionary
-    # mockDictionary = {
-    #     "status": 1,
-    #     "msg": "Puerta abierta"
-    # }
-
+    
     status = jsonLoad['status']
     print("Status :", status)
 
