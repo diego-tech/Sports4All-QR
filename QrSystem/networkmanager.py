@@ -6,7 +6,8 @@ url = "http://ec2-3-8-102-5.eu-west-2.compute.amazonaws.com/api/qrvalidation"
 def qrValidation(qrCode):
     params = {'qr': qrCode}
     request = requests.post(url, data = params)
-    print(json.dumps(request))
+    jsonLoad = json.loads(request)
+    print(jsonLoad)
 
     # Test With Mock Dictionary
     # mockDictionary = {
@@ -14,7 +15,7 @@ def qrValidation(qrCode):
     #     "msg": "Puerta abierta"
     # }
 
-    status = request['status']
+    status = jsonLoad['status']
     print("Status :", status)
 
     return status
